@@ -1,0 +1,2725 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mercedes-Benz Electric CLA Guidebook</title>
+  
+  <!-- Open Graph 메타 태그 -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="THE ALL-NEW ELECTRIC CLA 국내 사양 종합 가이드">
+  <meta property="og:description" content="사전예약 9/1 오픈 · 인도 10월 말부터. 5,290만원부터. 국내 출시 5종 라인업 비교, CLA 200 vs CLA 250+ 세부 사양 (포항전시장 김석현 과장)">
+  <meta property="og:image" content="images/og-thumb.jpg">
+
+  <style>
+    /* =========================================================
+       1. 화면 기본 스타일 (다크 모드 디자인)
+       ========================================================= */
+    :root {
+      --mb-black: #08080a;
+      --mb-dark-gray: #121316;
+      --mb-card-bg: #1a1c20;
+      --mb-silver: #a0a5aa;
+      --mb-white: #ffffff;
+      --mb-accent: #00adef;
+      --mb-border: #262930;
+      --mb-highlight: #f59e0b;
+      --accent-green: #00adef;
+      --accent-gold: #7ed6ff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+      background-color: var(--mb-black);
+      color: var(--mb-white);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: rgba(8, 8, 10, 0.95);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--mb-border);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: var(--mb-white);
+    }
+
+    .advisor-info {
+      font-size: 0.9rem;
+      color: var(--mb-silver);
+    }
+
+    .advisor-info span {
+      color: var(--mb-accent);
+      font-weight: 600;
+      margin-left: 0.5rem;
+    }
+
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 50vh;
+      min-height: 360px;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding-top: 3.5rem;
+      border-bottom: 1px solid var(--mb-border);
+      background-color: #050505;
+    }
+
+    .hero-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 60%;
+      cursor: pointer;
+    }
+
+    .hero-gradient-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        to bottom,
+        rgba(8, 8, 10, 0.75) 0%,
+        rgba(8, 8, 10, 0.2) 40%,
+        rgba(8, 8, 10, 0.4) 70%,
+        rgba(8, 8, 10, 0.95) 100%
+      );
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      text-align: center;
+      z-index: 2;
+      padding: 0 1rem;
+      pointer-events: none;
+    }
+
+    .hero-overlay h2 {
+      font-size: 2.3rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin-bottom: 0.3rem;
+      text-transform: uppercase;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+    }
+
+    .hero-overlay p {
+      font-size: 1.05rem;
+      color: var(--mb-silver);
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+
+    .section-title-wrap {
+      margin-bottom: 1.8rem;
+    }
+
+    .section-tag {
+      font-size: 0.75rem;
+      color: var(--mb-accent);
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--mb-white);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .section-title::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 1.2rem;
+      background-color: var(--mb-accent);
+    }
+
+    .img-placeholder {
+      width: 100%;
+      background-color: #22252b;
+      border: 1px dashed #3a3f4a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--mb-silver);
+      font-size: 0.8rem;
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .img-placeholder img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: transform 0.4s ease;
+    }
+
+    .img-placeholder:hover::after {
+      content: '🔍 클릭하여 확대';
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      background: rgba(0, 0, 0, 0.75);
+      color: var(--mb-white);
+      padding: 4px 8px;
+      font-size: 0.7rem;
+      border-radius: 4px;
+      border: 1px solid var(--mb-accent);
+      z-index: 5;
+    }
+
+    /* =========================================================
+       2. 레이아웃 & 디테일
+       ========================================================= */
+
+    /* [1. 상단] 3분할 카운터 카드 */
+    .top-detail-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .top-detail-card {
+      background-color: var(--mb-card-bg);
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--mb-border);
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .top-detail-card:hover {
+      border-color: var(--mb-accent);
+      transform: translateY(-2px);
+    }
+
+    .top-detail-card:hover .img-placeholder img {
+      transform: scale(1.05);
+    }
+
+    .top-detail-card .img-wrapper {
+      height: 140px;
+    }
+
+    .top-detail-info {
+      padding: 0.8rem 1rem;
+    }
+
+    .top-detail-info h4 {
+      font-size: 0.88rem;
+      color: var(--mb-white);
+    }
+
+    /* [2. 외관] */
+    .feature-split-row {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 2rem;
+      align-items: center;
+      margin-bottom: 4rem;
+      background-color: var(--mb-dark-gray);
+      padding: 2rem;
+      border-radius: 12px;
+      border: 1px solid var(--mb-border);
+    }
+
+    .feature-split-img {
+      height: 320px;
+    }
+
+    .feature-split-text h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.8rem;
+      color: var(--mb-white);
+    }
+
+    .feature-split-text p {
+      font-size: 0.9rem;
+      color: var(--mb-silver);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .feature-tags {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .feature-tag-item {
+      font-size: 0.75rem;
+      padding: 0.2rem 0.6rem;
+      background-color: rgba(0, 173, 239, 0.1);
+      color: var(--mb-accent);
+      border-radius: 4px;
+      border: 1px solid rgba(0, 173, 239, 0.2);
+    }
+
+    /* [3. 라인업 카드 5종] */
+    .lineup-section {
+      margin-bottom: 3.5rem;
+    }
+
+    .lineup-container {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1rem;
+      width: 100%;
+    }
+
+    .lineup-card {
+      background-color: var(--mb-card-bg);
+      border: 1px solid var(--mb-border);
+      border-radius: 10px;
+      padding: 1.2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .lineup-card:hover {
+      border-color: var(--mb-accent);
+      transform: translateY(-3px);
+    }
+
+    .lineup-card.active-target {
+      border-color: var(--mb-accent);
+    }
+
+    .lineup-card.main-highlight {
+      border: 1.5px solid var(--accent-gold);
+      box-shadow: 0 0 15px rgba(0, 173, 239, 0.25);
+    }
+
+    .lineup-card .lineup-img-wrapper {
+      height: 130px;
+      margin-bottom: 0.8rem;
+    }
+
+    .lineup-badge {
+      display: inline-block;
+      align-self: flex-start;
+      background-color: rgba(255, 255, 255, 0.08);
+      color: var(--mb-silver);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+    }
+
+    .lineup-badge.target {
+      background-color: rgba(0, 173, 239, 0.2);
+      color: var(--mb-accent);
+    }
+
+    .lineup-badge.main-star {
+      background-color: var(--accent-gold);
+      color: #000000;
+      font-weight: 800;
+      letter-spacing: -0.2px;
+      box-shadow: 0 2px 6px rgba(0, 173, 239, 0.4);
+    }
+
+    .lineup-card h3 {
+      font-size: 0.98rem;
+      margin-bottom: 0.3rem;
+      line-height: 1.35;
+    }
+
+    .lineup-price {
+      font-size: 0.88rem;
+      color: var(--mb-highlight);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .lineup-specs {
+      list-style: none;
+      border-top: 1px solid var(--mb-border);
+      padding-top: 0.8rem;
+    }
+
+    .lineup-specs li {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.78rem;
+      padding: 0.25rem 0;
+      color: var(--mb-silver);
+    }
+
+    .lineup-specs li span {
+      color: var(--mb-white);
+      font-weight: 500;
+    }
+
+    /* [4. 라인업 휠 4종 - 1:1 비율] */
+    .wheel-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1rem;
+      margin-bottom: 4rem;
+    }
+
+    .wheel-card {
+      background-color: var(--mb-card-bg);
+      border: 1px solid var(--mb-border);
+      border-radius: 8px;
+      padding: 0.8rem;
+      text-align: center;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .wheel-card:hover {
+      border-color: var(--mb-accent);
+      transform: translateY(-2px);
+    }
+
+    .wheel-card:hover .wheel-img img {
+      transform: scale(1.06);
+    }
+
+    .wheel-img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      height: auto;
+      margin-bottom: 0.6rem;
+    }
+
+    .wheel-card h5 {
+      font-size: 0.82rem;
+      color: var(--mb-white);
+    }
+
+    .wheel-card span {
+      font-size: 0.73rem;
+      color: var(--mb-accent);
+    }
+
+    /* [5. 디지털 콕핏] */
+    .cockpit-section {
+      margin-bottom: 4rem;
+    }
+
+    .hero-banner-box {
+      width: 100%;
+      height: 380px;
+      margin-bottom: 1.2rem;
+      border-radius: 12px;
+    }
+
+    .cockpit-sub-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .cockpit-sub-card {
+      background-color: var(--mb-card-bg);
+      border-radius: 8px;
+      padding: 1rem;
+      border: 1px solid var(--mb-border);
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .cockpit-sub-card:hover {
+      border-color: var(--mb-accent);
+      transform: translateY(-2px);
+    }
+
+    .cockpit-sub-card:hover .img-wrapper img {
+      transform: scale(1.05);
+    }
+
+    .cockpit-sub-card .img-wrapper {
+      height: 120px;
+      margin-bottom: 0.8rem;
+    }
+
+    .cockpit-sub-card h4 {
+      font-size: 0.92rem;
+      margin-bottom: 0.3rem;
+      color: var(--mb-white);
+    }
+
+    .cockpit-sub-card p {
+      font-size: 0.8rem;
+      color: var(--mb-silver);
+      line-height: 1.4;
+    }
+
+    /* [6. AMG Line vs AMG Line+ 와이드 비주얼] */
+    .compare-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.2rem;
+      margin-bottom: 4rem;
+      background-color: var(--mb-card-bg);
+      border: 1px solid var(--mb-border);
+      border-radius: 10px;
+      padding: 1.5rem;
+    }
+
+    .compare-box h4 {
+      font-size: 1.05rem;
+      color: var(--mb-accent);
+      margin-bottom: 0.8rem;
+      border-bottom: 1px solid var(--mb-border);
+      padding-bottom: 0.4rem;
+    }
+
+    .compare-box .compare-img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      max-height: 240px;
+      height: auto;
+      margin-bottom: 0.8rem;
+      border-radius: 6px;
+      background-color: #0d0e11;
+    }
+
+    .compare-box .compare-img img {
+      object-fit: contain;
+      background-color: #0d0e11;
+    }
+
+    .compare-box ul {
+      list-style: none;
+    }
+
+    .compare-box li {
+      font-size: 0.83rem;
+      color: var(--mb-silver);
+      margin-bottom: 0.4rem;
+      padding-left: 1.2rem;
+      position: relative;
+    }
+
+    .compare-box li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--mb-accent);
+    }
+
+    /* [7. 실내 공간] */
+    .space-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 4rem;
+      align-items: center;
+    }
+
+    .space-gallery {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .space-gallery-img {
+      height: 180px;
+    }
+
+    .space-info h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.8rem;
+      color: var(--mb-white);
+    }
+
+    .space-info p {
+      font-size: 0.88rem;
+      color: var(--mb-silver);
+      margin-bottom: 1.2rem;
+      line-height: 1.6;
+    }
+
+    /* [8. 색상 커스터마이저 - 2:1 비율] */
+    .color-section {
+      background-color: var(--mb-card-bg);
+      border: 1px solid var(--mb-border);
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .color-controls {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      background-color: var(--mb-dark-gray);
+      padding: 1.2rem;
+      border-radius: 8px;
+      border: 1px solid var(--mb-border);
+      margin-bottom: 1.2rem;
+    }
+
+    .color-control-group h3 {
+      font-size: 0.95rem;
+      color: var(--mb-white);
+      margin-bottom: 0.8rem;
+    }
+
+    .color-palette {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .color-chip {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 2px solid #444;
+      cursor: pointer;
+      transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .color-chip:hover {
+      transform: scale(1.1);
+    }
+
+    .color-chip.active {
+      border-color: var(--mb-accent);
+      box-shadow: 0 0 10px rgba(0, 173, 239, 0.6);
+    }
+
+    .selected-color-title {
+      font-size: 0.85rem;
+      color: var(--mb-accent);
+      margin-top: 0.6rem;
+      font-weight: 600;
+    }
+
+    .color-preview-container {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .preview-wrapper {
+      position: relative;
+    }
+
+    .preview-label {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: rgba(8, 8, 10, 0.8);
+      color: var(--mb-accent);
+      font-size: 0.75rem;
+      padding: 3px 8px;
+      border-radius: 4px;
+      border: 1px solid rgba(0, 173, 239, 0.3);
+      z-index: 2;
+    }
+
+    .color-preview-box {
+      height: 280px;
+      border: 1px solid var(--mb-border);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8);
+    }
+
+    .color-preview-box img {
+      object-fit: contain;
+      background-color: #0b0c0e;
+    }
+
+    .color-summary-bar {
+      background-color: var(--mb-dark-gray);
+      padding: 0.8rem 1rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      color: var(--mb-white);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      border: 1px solid var(--mb-border);
+    }
+
+    /* [9. 충전 인프라] */
+    .benefit-section {
+      margin-bottom: 3.5rem;
+    }
+
+    .benefit-card {
+      background: linear-gradient(135deg, #141c29 0%, #121316 100%);
+      border: 1px solid var(--mb-accent);
+      border-radius: 10px;
+      padding: 1.5rem;
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .benefit-img {
+      width: 220px;
+      height: 130px;
+      flex-shrink: 0;
+    }
+
+    .benefit-info h3 {
+      font-size: 1.15rem;
+      color: var(--mb-accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .benefit-info p {
+      font-size: 0.85rem;
+      color: var(--mb-silver);
+      line-height: 1.5;
+    }
+
+    /* [10. 전 모델 공통 사양] */
+    .grid-common {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.2rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .common-card {
+      background-color: var(--mb-card-bg);
+      border: 1px solid var(--mb-border);
+      border-radius: 10px;
+      padding: 1.2rem;
+    }
+
+    .common-card h3 {
+      font-size: 0.98rem;
+      color: var(--mb-white);
+      margin-bottom: 0.6rem;
+    }
+
+    .common-card ul {
+      list-style: none;
+    }
+
+    .common-card li {
+      font-size: 0.82rem;
+      color: var(--mb-silver);
+      padding: 0.2rem 0;
+      position: relative;
+      padding-left: 0.9rem;
+    }
+
+    .common-card li::before {
+      content: '•';
+      color: var(--mb-accent);
+      position: absolute;
+      left: 0;
+    }
+
+    /* [11. 보완된 표 및 모바일 카드 반응형 스타일] */
+    .table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      background-color: var(--mb-card-bg);
+      border-radius: 10px;
+      border: 1px solid var(--mb-border);
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .table-scroll-hint {
+      display: none;
+      font-size: 0.75rem;
+      color: var(--mb-accent);
+      text-align: right;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.82rem;
+      text-align: center;
+      min-width: 900px;
+    }
+
+    th, td {
+      padding: 0.75rem 0.8rem;
+      border-bottom: 1px solid var(--mb-border);
+      border-right: 1px solid var(--mb-border);
+      vertical-align: middle;
+    }
+
+    th:last-child, td:last-child {
+      border-right: none;
+    }
+
+    th {
+      background-color: var(--mb-dark-gray);
+      color: var(--mb-white);
+      font-weight: 600;
+    }
+
+    td {
+      color: var(--mb-silver);
+    }
+
+    table tr:hover td {
+      background-color: rgba(255, 255, 255, 0.02);
+      color: var(--mb-white);
+    }
+
+    .sticky-col {
+      position: sticky;
+      left: 0;
+      background-color: var(--mb-card-bg);
+      z-index: 10;
+      text-align: left;
+      font-weight: 600;
+      width: 180px;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+    }
+
+    .category-row td, .category-header {
+      background-color: #16181c;
+      color: var(--mb-accent);
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding-top: 0.9rem;
+      padding-bottom: 0.5rem;
+      text-align: left;
+    }
+
+    .badge-launch {
+      display: inline-block;
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-top: 4px;
+      font-weight: bold;
+      background-color: var(--accent-gold);
+      color: #000;
+    }
+
+    .price-highlight {
+      font-size: 0.95rem;
+      font-weight: bold;
+      color: var(--accent-green);
+    }
+
+    .dot-green {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: var(--accent-green);
+      border-radius: 50%;
+    }
+
+    .dot-gold {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: var(--accent-gold);
+      border-radius: 50%;
+    }
+
+    .none {
+      color: #555;
+    }
+
+    /* 모바일 매트릭스 카드 기본 숨김 지정 */
+    .mobile-matrix-container {
+      display: none;
+    }
+
+    /* 카탈로그 다운로드 섹션 스타일 */
+    .catalog-download-section {
+      background: linear-gradient(135deg, #141c29 0%, #121316 100%);
+      border: 1px solid var(--mb-border);
+      border-radius: 12px;
+      padding: 2.5rem 2rem;
+      margin-bottom: 3.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .catalog-info h3 {
+      font-size: 1.25rem;
+      color: var(--mb-white);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .catalog-info p {
+      font-size: 0.88rem;
+      color: var(--mb-silver);
+      line-height: 1.5;
+    }
+
+    .catalog-btn-group {
+      display: flex;
+      gap: 0.8rem;
+      flex-shrink: 0;
+    }
+
+    .c-btn-catalog {
+      background-color: var(--mb-accent);
+      color: var(--mb-black);
+      font-weight: 700;
+      border: none;
+    }
+    .c-btn-catalog:hover {
+      background-color: #0098d4;
+      transform: translateY(-1px);
+    }
+
+    .c-btn-outline {
+      background-color: transparent;
+      color: var(--mb-white);
+      border: 1px solid var(--mb-border);
+    }
+    .c-btn-outline:hover {
+      border-color: var(--mb-accent);
+      background-color: rgba(0, 173, 239, 0.05);
+      transform: translateY(-1px);
+    }
+
+    /* [12. 하단 상담 / 사전계약 CTA 배너] */
+    .consult-card {
+      background: linear-gradient(135deg, #141821 0%, #0a0b0d 100%);
+      border: 1.5px solid var(--mb-accent);
+      border-radius: 12px;
+      padding: 1.8rem 2rem;
+      margin-top: 2rem;
+      box-shadow: 0 8px 30px rgba(0, 173, 239, 0.15);
+    }
+
+    .consult-header {
+      margin-bottom: 1.2rem;
+    }
+
+    .consult-title-row {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .consult-title-row h3 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--mb-white);
+      letter-spacing: -0.3px;
+    }
+
+    .consult-subtext {
+      font-size: 0.88rem;
+      color: var(--mb-silver);
+      line-height: 1.5;
+    }
+
+    .consult-divider {
+      border: none;
+      border-top: 1px dashed var(--mb-border);
+      margin: 1.2rem 0;
+    }
+
+    .consult-bottom-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+    }
+
+    .advisor-details {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-size: 0.95rem;
+    }
+
+    .advisor-name {
+      color: var(--mb-silver);
+    }
+
+    .advisor-name strong {
+      color: var(--mb-white);
+      font-size: 1.05rem;
+    }
+
+    .advisor-phone {
+      color: var(--mb-accent);
+      font-weight: 800;
+      font-size: 1.1rem;
+      letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      text-decoration: none;
+    }
+
+    .consult-btn-group {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .c-btn {
+      padding: 0.65rem 1.1rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .c-btn-kakao {
+      background-color: #fee500;
+      color: #191919;
+    }
+    .c-btn-kakao:hover {
+      background-color: #fada0a;
+      transform: translateY(-1px);
+    }
+
+    .c-btn-call {
+      background-color: #2563eb;
+      color: #ffffff;
+    }
+    .c-btn-call:hover {
+      background-color: #1d4ed8;
+      transform: translateY(-1px);
+    }
+
+    .c-btn-sms {
+      background-color: #ffffff;
+      color: #1a1a1a;
+      border: 1px solid #d1d5db;
+    }
+    .c-btn-sms:hover {
+      background-color: #f3f4f6;
+      transform: translateY(-1px);
+    }
+
+    /* [13. 하단 푸터 / 주의사항 영역] */
+    footer {
+      border-top: 1px solid var(--mb-border);
+      background-color: #050507;
+      padding: 2.5rem 1.5rem;
+      margin-top: 4rem;
+    }
+
+    .footer-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      font-size: 0.78rem;
+      color: #71767e;
+      line-height: 1.7;
+    }
+
+    .footer-disclaimer {
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-disclaimer p {
+      margin-bottom: 0.2rem;
+    }
+
+    .footer-copyright {
+      color: #52565e;
+      font-size: 0.75rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding-top: 1rem;
+    }
+
+    /* =========================================================
+       3. 이미지 클릭 확대 모달 (Lightbox Modal)
+       ========================================================= */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      backdrop-filter: blur(5px);
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal-content {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 8px;
+      box-shadow: 0 0 30px rgba(0, 173, 239, 0.3);
+      object-fit: contain;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 2rem;
+      color: #fff;
+      cursor: pointer;
+      font-weight: bold;
+      transition: color 0.2s;
+    }
+
+    .modal-close:hover {
+      color: var(--mb-accent);
+    }
+
+    /* [브랜드 문구 인용 섹션] */
+    .brand-quote {
+      text-align: center;
+      padding: 3rem 1.5rem 2.8rem;
+    }
+
+    .brand-quote p {
+      font-size: 1.3rem;
+      font-weight: 700;
+      font-style: italic;
+      color: var(--mb-highlight);
+      line-height: 1.75;
+      max-width: 720px;
+      margin: 0 auto 1.2rem;
+    }
+
+    .brand-quote .quote-byline {
+      font-size: 0.78rem;
+      letter-spacing: 1.5px;
+      color: var(--mb-silver);
+      text-transform: uppercase;
+    }
+
+    .brand-quote .quote-byline span {
+      color: var(--mb-accent);
+      font-weight: 700;
+    }
+
+    /* [어드바이저 구매 전략 소개 섹션] */
+    .advisor-pitch {
+      display: grid;
+      grid-template-columns: 0.85fr 1.4fr;
+      gap: 2.5rem;
+      align-items: center;
+      background-color: var(--mb-dark-gray);
+      border: 1px solid var(--mb-border);
+      border-radius: 12px;
+      padding: 2.5rem;
+      margin-bottom: 4rem;
+    }
+
+    .advisor-pitch-img {
+      width: 100%;
+      height: 320px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .advisor-pitch-img img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    .advisor-pitch .section-tag {
+      color: var(--mb-highlight);
+    }
+
+    .advisor-pitch-body h3 {
+      font-size: 1.5rem;
+      line-height: 1.45;
+      margin-bottom: 0.9rem;
+      color: var(--mb-white);
+    }
+
+    .advisor-pitch-body > p {
+      font-size: 0.9rem;
+      color: var(--mb-silver);
+      line-height: 1.7;
+      margin-bottom: 1.6rem;
+    }
+
+    .advisor-stats {
+      display: flex;
+      gap: 2.2rem;
+      margin-bottom: 1.8rem;
+      padding-bottom: 1.8rem;
+      border-bottom: 1px solid var(--mb-border);
+    }
+
+    .advisor-stat-num {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--mb-highlight);
+    }
+
+    .advisor-stat-label {
+      font-size: 0.75rem;
+      color: var(--mb-silver);
+      margin-top: 0.2rem;
+    }
+
+    .advisor-pitch-btns {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    /* 반응형 스타일 조정 */
+    @media (max-width: 1100px) {
+      .lineup-container {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 992px) {
+      .wheel-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .feature-split-row, .space-section, .color-controls, .color-preview-container {
+        grid-template-columns: 1fr;
+      }
+      .feature-split-img {
+        height: 250px;
+      }
+      .color-preview-box {
+        height: 220px;
+      }
+      .catalog-download-section {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .catalog-btn-group {
+        width: 100%;
+        flex-direction: column;
+      }
+      .table-scroll-hint {
+        display: block;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .table-wrapper-matrix {
+        display: none;
+      }
+
+      .mobile-matrix-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+      }
+
+      .mobile-matrix-card {
+        background-color: var(--mb-card-bg);
+        border: 1px solid var(--mb-border);
+        border-radius: 12px;
+        padding: 1.2rem;
+      }
+
+      .mobile-matrix-card.highlight {
+        border-color: var(--mb-accent);
+      }
+
+      .mobile-matrix-card.main-highlight {
+        border: 1.5px solid var(--accent-gold);
+        box-shadow: 0 0 15px rgba(0, 173, 239, 0.2);
+      }
+
+      .mobile-matrix-header {
+        border-bottom: 1px solid var(--mb-border);
+        padding-bottom: 0.8rem;
+        margin-bottom: 0.8rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+
+      .mobile-matrix-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--mb-white);
+      }
+
+      .mobile-matrix-sub {
+        font-size: 0.75rem;
+        color: var(--mb-silver);
+      }
+
+      .mobile-matrix-price {
+        font-size: 1.1rem;
+        font-weight: 800;
+        color: var(--accent-green);
+        margin-top: 0.3rem;
+      }
+
+      .mobile-matrix-group-title {
+        font-size: 0.8rem;
+        color: var(--mb-accent);
+        font-weight: 700;
+        margin: 0.8rem 0 0.4rem;
+        padding-bottom: 0.2rem;
+        border-bottom: 1px dashed var(--mb-border);
+      }
+
+      .mobile-matrix-row {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.82rem;
+        padding: 0.35rem 0;
+        border-bottom: 1px solid rgba(255,255,255,0.03);
+      }
+
+      .mobile-matrix-row .label {
+        color: var(--mb-silver);
+      }
+
+      .mobile-matrix-row .val {
+        color: var(--mb-white);
+        font-weight: 600;
+        text-align: right;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .top-detail-grid, .cockpit-sub-grid, .lineup-container, .wheel-grid, .compare-container, .grid-common {
+        grid-template-columns: 1fr;
+      }
+      .advisor-pitch {
+        grid-template-columns: 1fr;
+        padding: 1.6rem;
+        text-align: center;
+      }
+      .advisor-pitch-img {
+        max-width: 100%;
+        height: 250px;
+        margin: 0 auto;
+      }
+      .advisor-stats {
+        justify-content: center;
+      }
+      .advisor-pitch-btns {
+        justify-content: center;
+      }
+      .consult-bottom-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .consult-btn-group {
+        width: 100%;
+      }
+      .c-btn {
+        flex: 1;
+        text-align: center;
+      }
+      .benefit-card {
+        flex-direction: column;
+      }
+      .benefit-img {
+        width: 100%;
+        height: 160px;
+      }
+      header {
+        padding: 0.8rem 1.1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+      }
+      header h1 {
+        font-size: 0.95rem;
+      }
+      .advisor-info {
+        font-size: 0.72rem;
+        text-align: left;
+        line-height: 1.4;
+      }
+    }
+
+    /* 이미지 클릭 확대 */
+    .clickable-img {
+      cursor: zoom-in;
+    }
+
+    .image-modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .image-modal.active {
+      display: flex;
+    }
+
+    .modal-content {
+      max-width: 90%;
+      max-height: 85vh;
+      border-radius: 8px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.8rem;
+      color: #fff;
+      font-size: 2.2rem;
+      font-weight: 300;
+      cursor: pointer;
+      line-height: 1;
+      z-index: 1001;
+    }
+
+    .modal-close:hover {
+      color: var(--mb-accent);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Header & Hero 비주얼 -->
+  <header>
+    <h1>MERCEDES-BENZ</h1>
+    <div class="advisor-info">
+      포항전시장 <span>김석현 과장 (010-9379-0999)</span>
+    </div>
+  </header>
+
+  <section class="hero">
+    <img src="images/hero-main.jpg" alt="THE ALL-NEW ELECTRIC CLA Front View" class="hero-img clickable-img">
+    <div class="hero-gradient-overlay"></div>
+    <div class="hero-overlay">
+      <h2>THE ALL-NEW ELECTRIC CLA</h2>
+      <p>국내 출시 5종 라인업 · 사전예약 9월 1일 오픈</p>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <!-- 1. 어드바이저 소개 & 브랜드 신뢰 -->
+    <section class="brand-quote">
+      <p>"가격은 같습니다. 사람이 다릅니다.<br>
+      계약부터 출고 후 관리까지, 변함없이 친절하겠습니다."</p>
+      <div class="quote-byline">MERCEDES-BENZ ADVISOR · <span>김석현 과장</span></div>
+    </section>
+
+    <section class="advisor-pitch">
+      <div class="advisor-pitch-img">
+        <img src="https://kim-benz.github.io/main/images/profile-photo.jpg" alt="김석현 과장">
+      </div>
+      <div class="advisor-pitch-body">
+        <span class="section-tag">PERSONAL CONSULTING GUIDE</span>
+        <h3>일렉트릭 CLA, 친절하게<br>끝까지 함께합니다.</h3>
+        <p>저는 고객님의 주행 패턴과 예산에 맞춰 CLA 200과 250+ 중 어떤 트림이 맞는지부터 실제로 비교해드리고, 출고 이후 관리까지 계속 책임집니다. 계약 순간의 친절이 아니라, 그 이후에도 변함없는 케어를 약속드립니다.</p>
+        <div class="advisor-stats">
+          <div>
+            <div class="advisor-stat-num">2018~</div>
+            <div class="advisor-stat-label">벤츠 포항전시장 근무</div>
+          </div>
+          <div>
+            <div class="advisor-stat-num">EQ·AMG</div>
+            <div class="advisor-stat-label">SALES EXPERT 인증</div>
+          </div>
+          <div>
+            <div class="advisor-stat-num">1:1</div>
+            <div class="advisor-stat-label">프라이빗 컨설팅</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. 최상단 디테일 3분할 컷 -->
+    <section class="top-detail-grid">
+      <div class="top-detail-card">
+        <div class="img-placeholder img-wrapper">
+          <span>[사진: 플러시 도어 핸들]</span>
+          <img src="images/detail-doorhandle.jpg" alt="플러시 도어 핸들" class="clickable-img" onerror="this.style.display='none'">
+        </div>
+        <div class="top-detail-info">
+          <h4>플러시 도어 핸들</h4>
+        </div>
+      </div>
+
+      <div class="top-detail-card">
+        <div class="img-placeholder img-wrapper">
+          <span>[사진: 전면 트렁크]</span>
+          <img src="images/detail-frunk.jpg" alt="전면 트렁크 프렁크" class="clickable-img" onerror="this.style.display='none'">
+        </div>
+        <div class="top-detail-info">
+          <h4>전면 트렁크 (프렁크) 101L</h4>
+        </div>
+      </div>
+
+      <div class="top-detail-card">
+        <div class="img-placeholder img-wrapper">
+          <span>[사진: 셀피/비디오 카메라]</span>
+          <img src="images/detail-camera.jpg" alt="셀피 비디오 카메라" class="clickable-img" onerror="this.style.display='none'">
+        </div>
+        <div class="top-detail-info">
+          <h4>셀피 / 비디오 카메라 (전 트림 기본)</h4>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. 외관 디자인 하이라이트 -->
+    <section>
+      <div class="feature-split-row">
+        <div class="img-placeholder feature-split-img">
+          <span>[사진: CLA EV 측후면 메인 컷]</span>
+          <img src="images/ext-sideview.jpg" alt="CLA EV 측면" class="clickable-img" onerror="this.style.display='none'">
+        </div>
+        <div class="feature-split-text">
+          <span class="section-tag">EXTERIOR DESIGN</span>
+          <h3>MMA 플랫폼으로 다시 태어난 컴팩트 전기 세단</h3>
+          <p>벤츠 최초의 800V 시스템과 2단 변속기를 가진 후륜구동 전기 구동계를 적용해, 2013년 CLA(C117)가 세운 기록을 넘어서는 공기저항계수 0.21Cd를 달성했습니다. 기존 EQA·EQB의 EVA 1.5 플랫폼과 달리 처음부터 전기차 전용으로 설계됐습니다.</p>
+          <div class="feature-tags">
+            <span class="feature-tag-item">MMA 플랫폼</span>
+            <span class="feature-tag-item">후륜구동 · 800V</span>
+            <span class="feature-tag-item">0.21 Cd</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. 국내 출시 라인업 5종 카드 -->
+    <section id="lineup" class="lineup-section">
+      <div class="section-title-wrap">
+        <span class="section-tag">MODEL LINEUP</span>
+        <h2 class="section-title">국내 출시 라인업 5종</h2>
+      </div>
+      <p style="font-size:0.85rem; color:var(--mb-highlight); margin-bottom:1.2rem; font-weight:600;">📢 사전예약 2026년 9월 1일 오픈 · 고객 인도 10월 말부터 (가격은 부가세 포함)</p>
+      <div class="lineup-container">
+
+        <div class="lineup-card">
+          <div>
+            <div class="img-placeholder lineup-img-wrapper">
+              <span>[사진: CLA 200 Essential]</span>
+              <img src="images/lineup-cla200-essential.jpg" alt="CLA 200 electric Essential" class="clickable-img" onerror="this.style.display='none'">
+            </div>
+            <span class="lineup-badge">국내 EV 보조금 대응 엔트리</span>
+            <h3>CLA 200 electric Essential</h3>
+            <p class="lineup-price">5,290만원</p>
+          </div>
+          <ul class="lineup-specs">
+            <li>내장재 <span>ARTICO 가죽 블랙 (101A)</span></li>
+            <li>휠/타이어 <span>17″ (R22)</span></li>
+            <li>배터리 <span>58 kWh · LFP</span></li>
+            <li>주행거리 <span>542 km (WLTP)</span></li>
+          </ul>
+        </div>
+
+        <div class="lineup-card">
+          <div>
+            <div class="img-placeholder lineup-img-wrapper">
+              <span>[사진: CLA 200 Advanced]</span>
+              <img src="images/lineup-cla200-advanced.jpg" alt="CLA 200 electric Advanced" class="clickable-img" onerror="this.style.display='none'">
+            </div>
+            <span class="lineup-badge">CLA 200 중 가성비 균형점</span>
+            <h3>CLA 200 electric Advanced</h3>
+            <p class="lineup-price">5,580만원</p>
+          </div>
+          <ul class="lineup-specs">
+            <li>내장재 <span>ARTICO 가죽 블랙 (101A)</span></li>
+            <li>휠/타이어 <span>18″ (R32)</span></li>
+            <li>옵션 <span>HUD / MB.드라이브 어시스트</span></li>
+            <li>배터리 <span>58 kWh · 최대 542km</span></li>
+          </ul>
+        </div>
+
+        <div class="lineup-card active-target">
+          <div>
+            <div class="img-placeholder lineup-img-wrapper">
+              <span>[사진: CLA 200 AMG Line]</span>
+              <img src="images/lineup-cla200-amgline.jpg" alt="CLA 200 electric AMG Line Launch Edition" class="clickable-img" onerror="this.style.display='none'">
+            </div>
+            <span class="lineup-badge target">LAUNCH EDITION · CLA 200 최상급</span>
+            <h3>CLA 200 electric AMG Line Launch Edition</h3>
+            <p class="lineup-price">5,890만원</p>
+          </div>
+          <ul class="lineup-specs">
+            <li>내장재 <span>마이크로컷 투톤 (681A)</span></li>
+            <li>휠/타이어 <span>18″ AMG (RQJ)</span></li>
+            <li>옵션 <span>스포츠 시트 / 나파 가죽 스티어링</span></li>
+            <li>배터리 <span>58 kWh · 최대 542km</span></li>
+          </ul>
+        </div>
+
+        <!-- CLA 250+ 기본 (메인주력 강조 포인트 적용) -->
+        <div class="lineup-card main-highlight">
+          <div>
+            <div class="img-placeholder lineup-img-wrapper">
+              <span>[사진: CLA 250+ 기본]</span>
+              <img src="images/lineup-cla250-base.jpg" alt="CLA 250+ electric" class="clickable-img" onerror="this.style.display='none'">
+            </div>
+            <span class="lineup-badge main-star">⭐ MAIN MODEL · 메인 주력</span>
+            <h3 style="color:var(--mb-white); font-weight:800;">CLA 250+ electric</h3>
+            <p class="lineup-price">6,370만원</p>
+          </div>
+          <ul class="lineup-specs">
+            <li>내장재 <span>ARTICO 가죽 블랙 (101A)</span></li>
+            <li>휠/타이어 <span>18″ (R87)</span></li>
+            <li>스크린 <span>MBUX 슈퍼스크린 (860)</span></li>
+            <li>배터리 <span>85 kWh · 최대 792km</span></li>
+          </ul>
+        </div>
+
+        <div class="lineup-card active-target">
+          <div>
+            <div class="img-placeholder lineup-img-wrapper">
+              <span>[사진: CLA 250+ AMG Line]</span>
+              <img src="images/lineup-cla250-amgline.jpg" alt="CLA 250+ electric AMG Line Launch Edition" class="clickable-img" onerror="this.style.display='none'">
+            </div>
+            <span class="lineup-badge target">LAUNCH EDITION · 최상위</span>
+            <h3>CLA 250+ electric AMG Line Launch Edition</h3>
+            <p class="lineup-price">6,770만원</p>
+          </div>
+          <ul class="lineup-specs">
+            <li>내장재 <span>마이크로컷 투톤 (681A)</span></li>
+            <li>휠/타이어 <span>18″ AMG (RQK)</span></li>
+            <li>스크린 <span>MBUX 슈퍼스크린 (860)</span></li>
+            <li>배터리 <span>85 kWh · 최대 792km</span></li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. CLA 200 vs CLA 250+ 핵심 비교 -->
+    <section>
+      <div class="section-title-wrap">
+        <span class="section-tag">COMPARISON</span>
+        <h2 class="section-title">CLA 200 VS CLA 250+ 차이점</h2>
+      </div>
+      <div class="compare-container">
+        <div class="compare-box">
+          <h4>CLA 200 electric (58kWh · LFP)</h4>
+          <div class="img-placeholder compare-img">
+            <span>[사진 위치: CLA 200 AMG Line 외관]</span>
+            <img src="images/compare-cla200.jpg" alt="CLA 200 electric 외관" class="clickable-img" onerror="this.style.display='none'">
+          </div>
+          <ul>
+            <li>출력 165kW(224PS) · 0-100km/h 7.5초</li>
+            <li>WLTP 주행거리 542km · 최대 200kW 급속충전</li>
+            <li>Essential · Advanced · AMG Line 3트림</li>
+            <li>주 5일 출퇴근, 완속 충전 환경이 있는 분께 추천</li>
+          </ul>
+        </div>
+
+        <div class="compare-box">
+          <h4>CLA 250+ electric (85kWh · NCM) <span style="color:var(--accent-gold); font-weight:bold;">[메인 주력]</span></h4>
+          <div class="img-placeholder compare-img">
+            <span>[사진 위치: CLA 250+ AMG Line 외관]</span>
+            <img src="images/compare-cla250.jpg" alt="CLA 250+ electric 외관" class="clickable-img" onerror="this.style.display='none'">
+          </div>
+          <ul>
+            <li>출력 200kW(272PS) · 0-100km/h 6.7초</li>
+            <li><strong>WLTP 주행거리 792km</strong> · 최대 320kW 급속충전</li>
+            <li><strong>MBUX 슈퍼스크린 · 2존 공조 · 전동 트렁크</strong> 기본</li>
+            <li>장거리 주행이 잦고 급속충전 의존도가 높은 분께 추천</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. 트림별 전용 휠 디자인 -->
+    <section>
+      <div class="section-title-wrap">
+        <span class="section-tag">WHEEL DESIGN</span>
+        <h2 class="section-title">트림별 전용 휠 디자인</h2>
+      </div>
+      <div class="wheel-grid">
+        <div class="wheel-card">
+          <div class="img-placeholder wheel-img">
+            <span>[17″ R22]</span>
+            <img src="images/wheel-17-r22.jpg" alt="17인치 R22 휠" class="clickable-img" onerror="this.style.display='none'">
+          </div>
+          <h5>CLA 200 Essential</h5>
+          <span>17인치 경량 알로이 휠 (R22)</span>
+        </div>
+
+        <div class="wheel-card">
+          <div class="img-placeholder wheel-img">
+            <span>[18″ R32]</span>
+            <img src="images/wheel-18-r32.jpg" alt="18인치 R32 휠" class="clickable-img" onerror="this.style.display='none'">
+          </div>
+          <h5>CLA 200 Advanced</h5>
+          <span>18인치 5스포크 경량 알로이 휠 (R32)</span>
+        </div>
+
+        <div class="wheel-card">
+          <div class="img-placeholder wheel-img">
+            <span>[18″ RQJ]</span>
+            <img src="images/wheel-18-rqj.jpg" alt="18인치 RQJ 휠" class="clickable-img" onerror="this.style.display='none'">
+          </div>
+          <h5>CLA 200 AMG Line</h5>
+          <span>18인치 AMG 5스포크 휠 (RQJ)</span>
+        </div>
+
+        <div class="wheel-card" style="border-color:var(--accent-gold);">
+          <div class="img-placeholder wheel-img">
+            <span>[18″ R87]</span>
+            <img src="images/wheel-18-r87.jpg" alt="18인치 R87 휠" class="clickable-img" onerror="this.style.display='none'">
+          </div>
+          <h5>CLA 250+ 기본 <span style="color:var(--accent-gold); font-weight:bold;">★ 메인 주력</span></h5>
+          <span>18인치 5트윈스포크 경량 알로이 휠 (R87)</span>
+        </div>
+
+        <div class="wheel-card">
+          <div class="img-placeholder wheel-img">
+            <span>[18″ RQK]</span>
+            <img src="images/wheel-18-rqk.jpg" alt="18인치 RQK 휠" class="clickable-img" onerror="this.style.display='none'">
+          </div>
+          <h5>CLA 250+ AMG Line</h5>
+          <span>18인치 AMG 5스포크 휠 (RQK)</span>
+        </div>
+      </div>
+      <p style="font-size:0.78rem; color:var(--mb-silver); margin-top:0.8rem;">* 에어로다이내믹 휠 디자인은 0.21 Cd 달성에 직접 기여합니다. 각 휠은 트림별로 고정 적용되며, 별도 선택 옵션은 없습니다.</p>
+    </section>
+
+    <!-- 7. MBUX 슈퍼스크린 & 콕핏 -->
+    <section class="cockpit-section">
+      <div class="section-title-wrap">
+        <span class="section-tag">INTERIOR · MBUX</span>
+        <h2 class="section-title">대시보드를 가로지르는 MBUX 슈퍼스크린</h2>
+      </div>
+      
+      <div class="img-placeholder hero-banner-box">
+        <span>[사진: MBUX 슈퍼스크린 파노라마 뷰]</span>
+        <img src="images/cockpit-superscreen.jpg" alt="MBUX 슈퍼스크린" class="clickable-img" onerror="this.style.display='none'">
+      </div>
+
+      <div class="cockpit-sub-grid">
+        <div class="cockpit-sub-card">
+          <div class="img-placeholder img-wrapper">
+            <span>[800V 초급속 충전]</span>
+            <img src="images/cockpit-800v.jpg" alt="800V 초급속 충전" class="clickable-img" onerror="this.style.display='none'">
+          </div>
+          <h4>브랜드 최초 800V 시스템</h4>
+          <p>최대 320kW 급속충전으로 10%→80%까지 약 22분(250+ 기준). 전압이 2배가 되면 전류는 절반으로 줄어 발열도 감소합니다.</p>
+        </div>
+
+        <div class="cockpit-sub-card">
+          <div class="img-placeholder img-wrapper">
+            <span>[2단 변속기]</span>
+            <img src="images/cockpit-2speed.jpg" alt="전기차 2단 변속기" class="clickable-img" onerror="this.style.display='none'">
+          </div>
+          <h4>전기차 2단 변속기 (eATS)</h4>
+          <p>고속 주행에서도 효율을 지키는 후륜구동 2단 변속기로, 도심과 고속 주행 모두에 대응합니다.</p>
+        </div>
+
+        <div class="cockpit-sub-card">
+          <div class="img-placeholder img-wrapper">
+            <span>[MB.DRIVE]</span>
+            <img src="images/cockpit-mbdrive.jpg" alt="MB.DRIVE 어시스트" class="clickable-img" onerror="this.style.display='none'">
+          </div>
+          <h4>MB.드라이브 어시스트 패키지</h4>
+          <p>차세대 MB.OS 기반으로 OTA를 통해 MB.OS와 주요 ECU까지 업데이트되는 반자율 주행 경험을 전합니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. MMA 플랫폼 차별점 (EQA·EQB 비교) -->
+    <section class="benefit-section">
+      <div class="section-title-wrap">
+        <span class="section-tag">MMA ARCHITECTURE</span>
+        <h2 class="section-title">EQA·EQB와 무엇이 다른가</h2>
+      </div>
+      <div class="benefit-card">
+        <div class="img-placeholder benefit-img">
+          <span>[사진 위치: MMA 플랫폼 · 800V 시스템]</span>
+          <img src="images/infra-mma-platform.jpg" alt="MMA 플랫폼" class="clickable-img" onerror="this.style.display='none'">
+        </div>
+        <div class="benefit-info">
+          <h3>내연기관 기반 EVA 1.5 → 전기차 전용 MMA</h3>
+          <p>• <strong>구동방식:</strong> 전륜구동(EVA 1.5) → <strong>후륜구동</strong>으로, 정교한 핸들링과 가속 시 안정감이 개선됐습니다.<br>
+          • <strong>전압:</strong> 400V → <strong>800V</strong>로, 최대 충전 출력이 100kW에서 <strong>320kW</strong>까지 대폭 향상됐습니다.<br>
+          • <strong>변속기:</strong> 1단 감속기 → <strong>2단 변속기</strong>로, 고속 주행과 효율 주행 모두에 대응합니다.<br>
+          • <strong>열관리:</strong> 히트 펌프 → <strong>멀티 소스 히트 펌프</strong>로, 겨울철 주행거리가 개선됐습니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. 실내 공간 & 적재 실용성 -->
+    <section class="space-section">
+      <div class="space-gallery">
+        <div class="img-placeholder space-gallery-img">
+          <span>[사진: 2열 좌석 레그룸]</span>
+          <img src="images/space-rear-seat.jpg" alt="2열 시트" class="clickable-img" onerror="this.style.display='none'">
+        </div>
+        <div class="img-placeholder space-gallery-img">
+          <span>[사진: 트렁크 & 프렁크 적재 공간]</span>
+          <img src="images/space-trunk.jpg" alt="적재 공간" class="clickable-img" onerror="this.style.display='none'">
+        </div>
+      </div>
+      <div class="space-info">
+        <span class="section-tag">PRACTICALITY & COMFORT</span>
+        <h3>이전 세대보다 넓어진 컴팩트 세단</h3>
+        <p>신형 CLA(C174)는 이전 세대(C118) 대비 휠베이스가 61mm 길어진 2,790mm로, 뒷좌석 레그룸이 눈에 띄게 개선됐습니다. 전 트림 기본 적용되는 전면 트렁크(프렁크)로 실용성도 더했습니다.</p>
+        <p>트렁크 <strong>405L</strong>과 전면 <strong>101L 프렁크</strong>가 전 트림 기본이며, CLA 250+ electric은 <strong>전동 트렁크 · 핸즈 프리 액세스</strong>까지 기본 적용되어 짐이 많을 때 더욱 편리합니다.</p>
+      </div>
+    </section>
+
+    <!-- 10. 외장 & 내장 컬러 커스터마이저 -->
+    <section class="color-section">
+      <div class="section-title-wrap">
+        <span class="section-tag">COLOR CUSTOMIZATION</span>
+        <h2 class="section-title">익스테리어 & 인테리어 컬러 선택</h2>
+      </div>
+      
+      <div class="color-controls">
+        <div class="color-control-group">
+          <h3>• 외장 컬러 — Progressive 전용 (Essential·Advanced·250+ 기본)</h3>
+          <div class="color-palette" id="ext-palette" data-group="progressive">
+            <div class="color-chip active" style="background:#f5f5f7;" data-color-name="149U - 폴라 화이트 (Progressive 전용)" data-img-src="images/ext-149u.jpg"></div>
+            <div class="color-chip" style="background:#a9dcd2;" data-color-name="341U - 아쿠아 민트 (Progressive 전용)" data-img-src="images/ext-341u.jpg"></div>
+            <div class="color-chip" style="background:#0c0c0c;" data-color-name="696U - 제트 블랙 (Progressive 전용)" data-img-src="images/ext-696u.jpg"></div>
+          </div>
+          <h3 style="margin-top:1.2rem;">• 외장 컬러 — AMG Line 전용 (200 AMG Line·250+ AMG Line)</h3>
+          <div class="color-palette" id="ext-palette-amg" data-group="amg">
+            <div class="color-chip" style="background:#2d5f8a;" data-color-name="809U - 시어 블루 (AMG Line 전용)" data-img-src="images/ext-809u.jpg"></div>
+            <div class="color-chip" style="background:#c7cbce;" data-color-name="922U - 하이테크 실버 (AMG Line 전용)" data-img-src="images/ext-922u.jpg"></div>
+            <div class="color-chip" style="background:#7d2f2f;" data-color-name="993U - MANUFAKTUR 파타고니아 레드 (AMG Line 전용)" data-img-src="images/ext-993u.jpg"></div>
+          </div>
+          <div class="selected-color-title" id="ext-selected-text">외장: 149U - 폴라 화이트 (Progressive 전용)</div>
+        </div>
+
+        <div class="color-control-group">
+          <h3>• 인테리어 시트 & 가죽 (Interior Upholstery)</h3>
+          <div class="color-palette" id="int-palette">
+            <div class="color-chip active" style="background:#1a1a1a;" data-color-name="101A - ARTICO 가죽 블랙/블랙 (기본 · Essential·Advanced·250+)" data-img-src="images/int-101a.jpg"></div>
+            <div class="color-chip" style="background:#e3d7c5;" data-color-name="105A - ARTICO 가죽 마키아토 베이지/블랙 (유료 옵션 · Essential·Advanced·250+)" data-img-src="images/int-105a.jpg"></div>
+            <div class="color-chip" style="background:#6b4530;" data-color-name="224A - 천연 가죽 브라운/블랙 (유료 옵션 · Essential·Advanced·250+)" data-img-src="images/int-224a.jpg"></div>
+            <div class="color-chip" style="background:#e8e8e8;" data-color-name="681A - ARTICO + 마이크로컷 투톤 블랙/클린 화이트 (AMG Line 기본 · AMG Line·250+ AMG)" data-img-src="images/int-681a.jpg"></div>
+          </div>
+          <div class="selected-color-title" id="int-selected-text">내장: 101A - ARTICO 가죽 블랙/블랙 (기본 · Essential·Advanced·250+)</div>
+        </div>
+      </div>
+
+      <div class="color-preview-container">
+        <div class="preview-wrapper">
+          <span class="preview-label">익스테리어 뷰</span>
+          <div class="img-placeholder color-preview-box">
+            <span>[외장 차량 사진]</span>
+            <img id="ext-preview-img" src="images/ext-149u.jpg" alt="외장 차량 사진" class="clickable-img" onerror="this.style.display='none'">
+          </div>
+        </div>
+
+        <div class="preview-wrapper">
+          <span class="preview-label">인테리어 뷰 (좌: 앞좌석 · 우: 뒷좌석)</span>
+          <div class="img-placeholder color-preview-box">
+            <span>[인테리어 시트 사진]</span>
+            <img id="int-preview-img" src="images/int-101a.jpg" alt="인테리어 시트 사진" class="clickable-img" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </div>
+
+      <div class="color-summary-bar">
+        🎨 <strong>최종 선택 조합:</strong> <span id="total-color-text">149U - 폴라 화이트 (Progressive 전용) / 101A - ARTICO 가죽 블랙/블랙 (기본 · Essential·Advanced·250+)</span>
+      </div>
+      <p style="font-size:0.78rem; color:var(--mb-silver); margin-top:0.8rem;">* 외장 컬러는 디자인 라인에 따라 선택 범위가 나뉩니다. Progressive 전용 3종과 AMG Line 전용 3종은 서로 겹치지 않으며, AMG Line 트림은 전용 3종 중에서만 선택 가능합니다. 224A 천연가죽은 293/U10 조합 옵션이 필요하며 AMG Line에서는 선택 불가합니다. 681A는 AMG Line 트림에 기본 적용되는 시트입니다.</p>
+    </section>
+
+    <!-- 11. 전 모델 공통 기본 사양 -->
+    <section class="lineup-section">
+      <div class="section-title-wrap">
+        <span class="section-tag">STANDARD FEATURES</span>
+        <h2 class="section-title">전 모델 공통 기본 사양</h2>
+      </div>
+      <div class="grid-common">
+        <div class="common-card">
+          <span class="section-tag">DESIGN & LIGHTING</span>
+          <h3>디자인 · 라이팅</h3>
+          <ul>
+            <li>LED 고성능 헤드램프</li>
+            <li>플러시 도어 핸들 & 일루미네이티드 패널</li>
+            <li>어댑티브 상향등 어시스트</li>
+            <li>파노라믹 루프 & 전면 트렁크(프렁크)</li>
+            <li>키레스 고 (Keyless-Go)</li>
+          </ul>
+        </div>
+
+        <div class="common-card">
+          <span class="section-tag">INFOTAINMENT</span>
+          <h3>디스플레이 · 인포테인먼트</h3>
+          <ul>
+            <li>MBUX 멀티미디어 시스템 · 센트럴 디스플레이</li>
+            <li>셀피 / 비디오 카메라 (전 트림 기본)</li>
+            <li>앰비언트 라이트</li>
+            <li>톨(하이패스) 정산 시스템</li>
+          </ul>
+        </div>
+
+        <div class="common-card">
+          <span class="section-tag">SEAT & COMFORT</span>
+          <h3>시트 · 컴포트</h3>
+          <ul>
+            <li>다기능 열선 스티어링 휠</li>
+            <li>앞좌석 열선 시트</li>
+            <li>앞좌석 무선 충전 시스템</li>
+            <li>컴포트 서스펜션</li>
+          </ul>
+        </div>
+
+        <div class="common-card">
+          <span class="section-tag">DRIVING & SAFETY</span>
+          <h3>주행 · 편의 · 안전</h3>
+          <ul>
+            <li>후륜구동(RWD) · 2단 변속기 기본</li>
+            <li>800V 시스템 · 멀티 소스 히트 펌프</li>
+            <li>카메라 8 · 초음파 센서 12 · 레이더 5</li>
+            <li>인텔리전트 드라이브 컨트롤러 통합 제어</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. 라인업별 옵션 상세 비교표 (데스크톱용 테이블 & 모바일용 카드 구조) -->
+    <section class="lineup-section">
+      <div class="section-title-wrap">
+        <span class="section-tag">OPTION MATRIX</span>
+        <h2 class="section-title">라인업별 옵션 상세 비교표</h2>
+      </div>
+      
+      <div class="table-scroll-hint">👈 좌우로 터치 스크롤하여 전체 비교하기</div>
+      
+      <!-- 데스크톱용 테이블 -->
+      <div class="table-wrapper table-wrapper-matrix">
+        <table>
+          <thead>
+            <tr>
+              <th class="sticky-col">구분</th>
+              <th>
+                <div style="font-size:11px; color:var(--mb-silver);">CLA 200 electric</div>
+                <div style="font-weight:bold;">Essential</div>
+              </th>
+              <th>
+                <div style="font-size:11px; color:var(--mb-silver);">CLA 200 electric</div>
+                <div style="font-weight:bold;">Advanced</div>
+              </th>
+              <th>
+                <div style="font-size:11px; color:var(--mb-silver);">CLA 200 electric</div>
+                <div style="font-weight:bold;">AMG Line</div>
+                <span class="badge-launch">LAUNCH EDITION</span>
+              </th>
+              <th style="background-color: #222017; border-bottom: 2px solid var(--accent-gold);">
+                <div style="font-size:11px; color:var(--accent-gold);">CLA 250+ electric</div>
+                <div style="font-weight:bold; color:#fff;">기본 <span class="badge-launch" style="background:var(--accent-gold); color:#000;">메인 주력</span></div>
+              </th>
+              <th>
+                <div style="font-size:11px; color:var(--mb-silver);">CLA 250+ electric</div>
+                <div style="font-weight:bold;">AMG Line</div>
+                <span class="badge-launch">LAUNCH EDITION</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- 가격 -->
+            <tr>
+              <td class="sticky-col" style="color: var(--accent-green);">판매 가격 (부가세 포함)</td>
+              <td class="price-highlight">52,900,000 원</td>
+              <td class="price-highlight">55,800,000 원</td>
+              <td class="price-highlight">58,900,000 원</td>
+              <td class="price-highlight" style="font-size:1.05rem; color:var(--accent-gold);">63,700,000 원</td>
+              <td class="price-highlight">67,700,000 원</td>
+            </tr>
+
+            <!-- 파워트레인 -->
+            <tr><td colspan="6" class="category-header">파워트레인</td></tr>
+            <tr>
+              <td class="sticky-col">최고 출력</td>
+              <td>165 kW · 224 PS</td>
+              <td>165 kW · 224 PS</td>
+              <td>165 kW · 224 PS</td>
+              <td style="color:#fff; font-weight:bold;">200 kW · 272 PS</td>
+              <td>200 kW · 272 PS</td>
+            </tr>
+            <tr>
+              <td class="sticky-col">1회 충전 주행거리</td>
+              <td>542 km (WLTP)</td>
+              <td>542 km (WLTP)</td>
+              <td>542 km (WLTP)</td>
+              <td style="color:#fff; font-weight:bold;">792 km (WLTP)</td>
+              <td>792 km (WLTP)</td>
+            </tr>
+            <tr>
+              <td class="sticky-col">배터리</td>
+              <td>58 kWh · LFP</td>
+              <td>58 kWh · LFP</td>
+              <td>58 kWh · LFP</td>
+              <td style="color:#fff; font-weight:bold;">85 kWh · NCM</td>
+              <td>85 kWh · NCM</td>
+            </tr>
+            <tr>
+              <td class="sticky-col">최대 급속충전</td>
+              <td>200 kW</td>
+              <td>200 kW</td>
+              <td>200 kW</td>
+              <td style="color:#fff; font-weight:bold;">320 kW</td>
+              <td>320 kW</td>
+            </tr>
+            <tr>
+              <td class="sticky-col">기본 패키지</td>
+              <td>어드밴스드 플러스</td>
+              <td>어드밴스드 플러스</td>
+              <td>어드밴스드 플러스</td>
+              <td style="color:#fff; font-weight:bold;">프리미엄</td>
+              <td>프리미엄</td>
+            </tr>
+
+            <!-- 외관 -->
+            <tr><td colspan="6" class="category-header">외관</td></tr>
+            <tr>
+              <td class="sticky-col">휠</td>
+              <td>17인치 경량 (R22)</td>
+              <td>18인치 5스포크 (R32)</td>
+              <td>18인치 AMG 5스포크 (RQJ)</td>
+              <td style="color:#fff; font-weight:bold;">18인치 5스포크 (R87)</td>
+              <td>18인치 AMG 5스포크 (RQK)</td>
+            </tr>
+            <tr>
+              <td class="sticky-col">선택 가능 외장 컬러</td>
+              <td>폴라 화이트 · 아쿠아 민트 · 제트 블랙</td>
+              <td>폴라 화이트 · 아쿠아 민트 · 제트 블랙</td>
+              <td>시어 블루 · 하이테크 실버 · 파타고니아 레드</td>
+              <td>폴라 화이트 · 아쿠아 민트 · 제트 블랙</td>
+              <td>시어 블루 · 하이테크 실버 · 파타고니아 레드</td>
+            </tr>
+            <tr>
+              <td class="sticky-col">LED 고성능 헤드램프</td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-gold"></span></td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-gold"></span></td>
+            </tr>
+            <tr>
+              <td class="sticky-col">어댑티브 상향등 어시스트</td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-gold"></span></td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-gold"></span></td>
+            </tr>
+            <tr>
+              <td class="sticky-col">플러시 도어 핸들</td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-gold"></span></td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-gold"></span></td>
+            </tr>
+            <tr>
+              <td class="sticky-col">일루미네이티드 패널</td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-gold"></span></td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-gold"></span></td>
+            </tr>
+            <tr>
+              <td class="sticky-col">파노라믹 루프</td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-gold"></span></td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-gold"></span></td>
+            </tr>
+            <tr>
+              <td class="sticky-col">전면 트렁크(프렁크)</td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-gold"></span></td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-gold"></span></td>
+            </tr>
+            <tr>
+              <td class="sticky-col">전동 트렁크 · 핸즈프리 액세스</td>
+              <td><span class="none">-</span></td>
+              <td><span class="none">-</span></td>
+              <td><span class="none">-</span></td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-gold"></span></td>
+            </tr>
+            <tr>
+              <td class="sticky-col">AMG 전용 바디 스타일링</td>
+              <td><span class="none">-</span></td>
+              <td><span class="none">-</span></td>
+              <td><span class="dot-gold"></span></td>
+              <td><span class="none">-</span></td>
+              <td><span class="dot-gold"></span></td>
+            </tr>
+            <tr>
+              <td class="sticky-col">패턴 애니메이션 프로젝션 라이트</td>
+              <td><span class="none">-</span></td>
+              <td><span class="none">-</span></td>
+              <td><span class="dot-gold"></span></td>
+              <td><span class="none">-</span></td>
+              <td><span class="dot-gold"></span></td>
+            </tr>
+
+            <!-- 멀티미디어 / 주행보조 -->
+            <tr><td colspan="6" class="category-header">멀티미디어 · 주행보조</td></tr>
+            <tr>
+              <td class="sticky-col">MBUX 시스템</td>
+              <td>MBUX 멀티미디어</td>
+              <td>MBUX 멀티미디어</td>
+              <td>MBUX 멀티미디어</td>
+              <td style="color:var(--accent-gold); font-weight:bold;">MBUX 슈퍼스크린</td>
+              <td>MBUX 슈퍼스크린</td>
+            </tr>
+            <tr>
+              <td class="sticky-col">센트럴 디스플레이</td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-gold"></span></td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-gold"></span></td>
+            </tr>
+            <tr>
+              <td class="sticky-col">헤드업 디스플레이 (HUD)</td>
+              <td><span class="none">-</span></td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-gold"></span></td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-gold"></span></td>
+            </tr>
+            <tr>
+              <td class="sticky-col">스마트폰 연동 (카플레이)</td>
+              <td><span class="none">-</span></td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-gold"></span></td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-gold"></span></td>
+            </tr>
+            <tr>
+              <td class="sticky-col">주행보조 시스템</td>
+              <td>MB.DRIVE 스탠다드</td>
+              <td>MB.DRIVE 어시스트</td>
+              <td>MB.DRIVE 어시스트</td>
+              <td>MB.DRIVE 어시스트</td>
+              <td>MB.DRIVE 어시스트</td>
+            </tr>
+            <tr>
+              <td class="sticky-col">셀피 / 비디오 카메라</td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-gold"></span></td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-gold"></span></td>
+            </tr>
+            <tr>
+              <td class="sticky-col">하이패스(톨 정산) 시스템</td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-gold"></span></td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-gold"></span></td>
+            </tr>
+
+            <!-- 내장 / 편의 -->
+            <tr><td colspan="6" class="category-header">내장 · 편의</td></tr>
+            <tr>
+              <td class="sticky-col">스티어링 휠</td>
+              <td>다기능 열선</td>
+              <td>다기능 열선</td>
+              <td>나파가죽 스포츠</td>
+              <td>다기능 열선</td>
+              <td>나파가죽 스포츠</td>
+            </tr>
+            <tr>
+              <td class="sticky-col">앞좌석 열선 시트</td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-gold"></span></td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-gold"></span></td>
+            </tr>
+            <tr>
+              <td class="sticky-col">앞좌석 무선충전</td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-gold"></span></td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-gold"></span></td>
+            </tr>
+            <tr>
+              <td class="sticky-col">앰비언트 라이트</td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-gold"></span></td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-gold"></span></td>
+            </tr>
+            <tr>
+              <td class="sticky-col">키레스 고</td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-gold"></span></td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-gold"></span></td>
+            </tr>
+            <tr>
+              <td class="sticky-col">2존 온도조절 시스템</td>
+              <td><span class="none">-</span></td>
+              <td><span class="none">-</span></td>
+              <td><span class="none">-</span></td>
+              <td><span class="dot-green"></span></td>
+              <td><span class="dot-gold"></span></td>
+            </tr>
+            <tr>
+              <td class="sticky-col">AMG 플로어 매트</td>
+              <td><span class="none">-</span></td>
+              <td><span class="none">-</span></td>
+              <td><span class="dot-gold"></span></td>
+              <td><span class="none">-</span></td>
+              <td><span class="dot-gold"></span></td>
+            </tr>
+            <tr>
+              <td class="sticky-col">스포티 엔진 사운드</td>
+              <td><span class="none">-</span></td>
+              <td><span class="none">-</span></td>
+              <td><span class="dot-gold"></span></td>
+              <td><span class="none">-</span></td>
+              <td><span class="dot-gold"></span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 모바일용 옵션 비교 카드 모음 -->
+      <div class="mobile-matrix-container">
+
+        <!-- 1. CLA 200 Essential -->
+        <div class="mobile-matrix-card">
+          <div class="mobile-matrix-header">
+            <div>
+              <div class="mobile-matrix-sub">CLA 200 electric</div>
+              <div class="mobile-matrix-title">Essential</div>
+            </div>
+            <div class="mobile-matrix-price">5,290만원</div>
+          </div>
+          <div class="mobile-matrix-group-title">[ 파워트레인 & 기본 ]</div>
+          <div class="mobile-matrix-row"><span class="label">최고출력 / 배터리</span><span class="val">165 kW / 58 kWh (LFP)</span></div>
+          <div class="mobile-matrix-row"><span class="label">1회 충전 주행거리</span><span class="val">542 km (WLTP)</span></div>
+          <div class="mobile-matrix-row"><span class="label">최대 급속충전</span><span class="val">200 kW</span></div>
+          <div class="mobile-matrix-row"><span class="label">기본 패키지</span><span class="val">어드밴스드 플러스</span></div>
+
+          <div class="mobile-matrix-group-title">[ 외관 & 휠 ]</div>
+          <div class="mobile-matrix-row"><span class="label">휠 디자인</span><span class="val">17인치 경량 (R22)</span></div>
+          <div class="mobile-matrix-row"><span class="label">외장 컬러</span><span class="val">폴라화이트 / 아쿠아민트 / 제트블랙</span></div>
+          <div class="mobile-matrix-row"><span class="label">라이트 & 루프</span><span class="val">LED 고성능 / 파노라믹 루프</span></div>
+          <div class="mobile-matrix-row"><span class="label">도어 & 트렁크</span><span class="val">플러시 도어 / 프렁크 101L</span></div>
+
+          <div class="mobile-matrix-group-title">[ 멀티미디어 & 안전 ]</div>
+          <div class="mobile-matrix-row"><span class="label">MBUX / 디스플레이</span><span class="val">MBUX 멀티미디어 / 센트럴</span></div>
+          <div class="mobile-matrix-row"><span class="label">주행보조 (ADAS)</span><span class="val">MB.DRIVE 스탠다드</span></div>
+          <div class="mobile-matrix-row"><span class="label">HUD / 카플레이</span><span class="val" style="color:var(--mb-silver);">미적용 (-)</span></div>
+          <div class="mobile-matrix-row"><span class="label">특화 사양</span><span class="val">셀피 카메라 / 하이패스 기본</span></div>
+        </div>
+
+        <!-- 2. CLA 200 Advanced -->
+        <div class="mobile-matrix-card">
+          <div class="mobile-matrix-header">
+            <div>
+              <div class="mobile-matrix-sub">CLA 200 electric</div>
+              <div class="mobile-matrix-title">Advanced</div>
+            </div>
+            <div class="mobile-matrix-price">5,580만원</div>
+          </div>
+          <div class="mobile-matrix-group-title">[ 파워트레인 & 기본 ]</div>
+          <div class="mobile-matrix-row"><span class="label">최고출력 / 배터리</span><span class="val">165 kW / 58 kWh (LFP)</span></div>
+          <div class="mobile-matrix-row"><span class="label">1회 충전 주행거리</span><span class="val">542 km (WLTP)</span></div>
+          <div class="mobile-matrix-row"><span class="label">최대 급속충전</span><span class="val">200 kW</span></div>
+          <div class="mobile-matrix-row"><span class="label">기본 패키지</span><span class="val">어드밴스드 플러스</span></div>
+
+          <div class="mobile-matrix-group-title">[ 외관 & 휠 ]</div>
+          <div class="mobile-matrix-row"><span class="label">휠 디자인</span><span class="val">18인치 5스포크 (R32)</span></div>
+          <div class="mobile-matrix-row"><span class="label">외장 컬러</span><span class="val">폴라화이트 / 아쿠아민트 / 제트블랙</span></div>
+          <div class="mobile-matrix-row"><span class="label">라이트 & 루프</span><span class="val">LED 고성능 / 파노라믹 루프</span></div>
+          <div class="mobile-matrix-row"><span class="label">도어 & 트렁크</span><span class="val">플러시 도어 / 프렁크 101L</span></div>
+
+          <div class="mobile-matrix-group-title">[ 멀티미디어 & 안전 ]</div>
+          <div class="mobile-matrix-row"><span class="label">MBUX / 디스플레이</span><span class="val">MBUX 멀티미디어 / 센트럴</span></div>
+          <div class="mobile-matrix-row"><span class="label">주행보조 (ADAS)</span><span class="val" style="color:var(--accent-green);">MB.DRIVE 어시스트 (추가)</span></div>
+          <div class="mobile-matrix-row"><span class="label">HUD / 카플레이</span><span class="val" style="color:var(--accent-green);">기본 탑재 (추가)</span></div>
+          <div class="mobile-matrix-row"><span class="label">특화 사양</span><span class="val">셀피 카메라 / 하이패스 기본</span></div>
+        </div>
+
+        <!-- 3. CLA 200 AMG Line Launch Edition -->
+        <div class="mobile-matrix-card">
+          <div class="mobile-matrix-header">
+            <div>
+              <div class="mobile-matrix-sub">CLA 200 electric <span class="badge-launch">LAUNCH</span></div>
+              <div class="mobile-matrix-title">AMG Line Launch Edition</div>
+            </div>
+            <div class="mobile-matrix-price">5,890만원</div>
+          </div>
+          <div class="mobile-matrix-group-title">[ 파워트레인 & 기본 ]</div>
+          <div class="mobile-matrix-row"><span class="label">최고출력 / 배터리</span><span class="val">165 kW / 58 kWh (LFP)</span></div>
+          <div class="mobile-matrix-row"><span class="label">1회 충전 주행거리</span><span class="val">542 km (WLTP)</span></div>
+          <div class="mobile-matrix-row"><span class="label">최대 급속충전</span><span class="val">200 kW</span></div>
+          <div class="mobile-matrix-row"><span class="label">기본 패키지</span><span class="val">어드밴스드 플러스</span></div>
+
+          <div class="mobile-matrix-group-title">[ 외관 & 익스테리어 ]</div>
+          <div class="mobile-matrix-row"><span class="label">휠 디자인</span><span class="val">18인치 AMG 5스포크 (RQJ)</span></div>
+          <div class="mobile-matrix-row"><span class="label">전용 외장 컬러</span><span class="val" style="color:var(--accent-gold);">시어블루/하이테크실버/파타고니아레드</span></div>
+          <div class="mobile-matrix-row"><span class="label">AMG 패키지</span><span class="val" style="color:var(--accent-gold);">전용 범퍼·에이프런·프로젝션 라이트</span></div>
+
+          <div class="mobile-matrix-group-title">[ 내장 & 인포테인먼트 ]</div>
+          <div class="mobile-matrix-row"><span class="label">시트 & 내장재</span><span class="val" style="color:var(--accent-gold);">마이크로컷 투톤 (681A) / AMG 매트</span></div>
+          <div class="mobile-matrix-row"><span class="label">스티어링 휠</span><span class="val" style="color:var(--accent-gold);">나파가죽 스포츠 스티어링</span></div>
+          <div class="mobile-matrix-row"><span class="label">HUD / 카플레이</span><span class="val">기본 탑재</span></div>
+          <div class="mobile-matrix-row"><span class="label">주행보조 (ADAS)</span><span class="val">MB.DRIVE 어시스트</span></div>
+        </div>
+
+        <!-- 4. CLA 250+ 기본 (모바일 강조) -->
+        <div class="mobile-matrix-card main-highlight">
+          <div class="mobile-matrix-header">
+            <div>
+              <div class="mobile-matrix-sub">CLA 250+ electric <span class="badge-launch" style="background:var(--accent-gold); color:#000;">★ 메인 주력</span></div>
+              <div class="mobile-matrix-title" style="color:var(--accent-gold);">CLA 250+ 기본 트림</div>
+            </div>
+            <div class="mobile-matrix-price" style="color:var(--accent-gold);">6,370만원</div>
+          </div>
+          <div class="mobile-matrix-group-title">[ 파워트레인 & 기본 ]</div>
+          <div class="mobile-matrix-row"><span class="label">최고출력 / 배터리</span><span class="val" style="color:var(--accent-green);">200 kW (272마력) / 85 kWh (NCM)</span></div>
+          <div class="mobile-matrix-row"><span class="label">1회 충전 주행거리</span><span class="val" style="color:var(--accent-green);">792 km (WLTP)</span></div>
+          <div class="mobile-matrix-row"><span class="label">최대 급속충전</span><span class="val" style="color:var(--accent-green);">320 kW (초급속)</span></div>
+          <div class="mobile-matrix-row"><span class="label">기본 패키지</span><span class="val" style="color:var(--accent-green);">프리미엄 패키지</span></div>
+
+          <div class="mobile-matrix-group-title">[ 디스플레이 & 편의 사양 ]</div>
+          <div class="mobile-matrix-row"><span class="label">디스플레이</span><span class="val" style="color:var(--accent-gold);">MBUX 슈퍼스크린 기본</span></div>
+          <div class="mobile-matrix-row"><span class="label">공조 & 트렁크</span><span class="val" style="color:var(--accent-green);">2존 온도조절 / 전동 트렁크</span></div>
+          <div class="mobile-matrix-row"><span class="label">HUD / 카플레이</span><span class="val">기본 탑재</span></div>
+          <div class="mobile-matrix-row"><span class="label">주행보조 (ADAS)</span><span class="val">MB.DRIVE 어시스트</span></div>
+
+          <div class="mobile-matrix-group-title">[ 외관 & 휠 ]</div>
+          <div class="mobile-matrix-row"><span class="label">휠 디자인</span><span class="val">18인치 5트윈스포크 (R87)</span></div>
+          <div class="mobile-matrix-row"><span class="label">외장 컬러</span><span class="val">폴라화이트 / 아쿠아민트 / 제트블랙</span></div>
+        </div>
+
+        <!-- 5. CLA 250+ AMG Line Launch Edition -->
+        <div class="mobile-matrix-card highlight">
+          <div class="mobile-matrix-header">
+            <div>
+              <div class="mobile-matrix-sub">CLA 250+ electric <span class="badge-launch">LAUNCH</span></div>
+              <div class="mobile-matrix-title">AMG Line Launch Edition</div>
+            </div>
+            <div class="mobile-matrix-price">6,770만원</div>
+          </div>
+          <div class="mobile-matrix-group-title">[ 파워트레인 & 기본 ]</div>
+          <div class="mobile-matrix-row"><span class="label">최고출력 / 배터리</span><span class="val" style="color:var(--accent-green);">200 kW (272마력) / 85 kWh (NCM)</span></div>
+          <div class="mobile-matrix-row"><span class="label">1회 충전 주행거리</span><span class="val" style="color:var(--accent-green);">792 km (WLTP)</span></div>
+          <div class="mobile-matrix-row"><span class="label">최대 급속충전</span><span class="val" style="color:var(--accent-green);">320 kW (초급속)</span></div>
+          <div class="mobile-matrix-row"><span class="label">기본 패키지</span><span class="val" style="color:var(--accent-green);">프리미엄 패키지</span></div>
+
+          <div class="mobile-matrix-group-title">[ AMG 전용 익스테리어 & 인테리어 ]</div>
+          <div class="mobile-matrix-row"><span class="label">휠 디자인</span><span class="val" style="color:var(--accent-gold);">18인치 AMG 5스포크 (RQK)</span></div>
+          <div class="mobile-matrix-row"><span class="label">전용 외장 컬러</span><span class="val" style="color:var(--accent-gold);">시어블루/하이테크실버/파타고니아레드</span></div>
+          <div class="mobile-matrix-row"><span class="label">AMG 패키지</span><span class="val" style="color:var(--accent-gold);">전용 범퍼·에이프런·프로젝션 라이트</span></div>
+          <div class="mobile-matrix-row"><span class="label">시트 & 스티어링</span><span class="val" style="color:var(--accent-gold);">마이크로컷 투톤 / 나파가죽 스포츠</span></div>
+
+          <div class="mobile-matrix-group-title">[ 디스플레이 & 편의 사양 ]</div>
+          <div class="mobile-matrix-row"><span class="label">디스플레이</span><span class="val" style="color:var(--accent-green);">MBUX 슈퍼스크린 기본</span></div>
+          <div class="mobile-matrix-row"><span class="label">공조 & 트렁크</span><span class="val" style="color:var(--accent-green);">2존 온도조절 / 전동 트렁크</span></div>
+          <div class="mobile-matrix-row"><span class="label">HUD / ADAS</span><span class="val">HUD 기본 / MB.DRIVE 어시스트</span></div>
+        </div>
+
+      </div>
+
+      <p style="font-size:0.78rem; color:var(--mb-silver); margin-top:0.8rem;">* 가격은 2026년 8월 기준 부가세 포함 소비자 가격입니다. AMG Line은 Launch Edition으로 운영되며, 전기차 보조금은 확정되는 대로 업데이트됩니다.</p>
+    </section>
+
+    <!-- 13. 국내 출시 제원표 -->
+    <section class="lineup-section">
+      <div class="section-title-wrap">
+        <span class="section-tag">TECHNICAL DATA</span>
+        <h2 class="section-title">CLA 200 vs CLA 250+ 국내 출시 제원표</h2>
+      </div>
+      <p style="font-size:0.8rem; color:var(--mb-silver); margin-bottom:0.8rem;">* WLTP 기준 수치이며, 국내 환경부 인증 주행거리는 별도 공지됩니다. 사전예약은 2026년 9월 1일 오픈, 고객 인도는 10월 말부터입니다.</p>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th style="width: 28%;">항목</th>
+              <th style="width: 36%;">CLA 200 electric</th>
+              <th style="width: 36%;">CLA 250+ electric</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="category-row">
+              <td colspan="3">[ 파워트레인 ]</td>
+            </tr>
+            <tr>
+              <td>구동 방식</td>
+              <td>후륜구동 (RWD)</td>
+              <td>공통</td>
+            </tr>
+            <tr>
+              <td>모터 최고출력</td>
+              <td>165 kW (약 224마력)</td>
+              <td><strong>200 kW (약 272마력)</strong></td>
+            </tr>
+            <tr>
+              <td>최대 토크</td>
+              <td>335 Nm</td>
+              <td>공통</td>
+            </tr>
+            <tr>
+              <td>변속기</td>
+              <td>2단 변속기</td>
+              <td>공통</td>
+            </tr>
+            <tr>
+              <td>0-100 km/h</td>
+              <td>7.5 초</td>
+              <td><strong>6.7 초</strong></td>
+            </tr>
+            <tr>
+              <td>최고 속도</td>
+              <td>210 km/h</td>
+              <td>210 km/h</td>
+            </tr>
+
+            <tr class="category-row">
+              <td colspan="3">[ 배터리 · 충전 ]</td>
+            </tr>
+            <tr>
+              <td>배터리 용량</td>
+              <td>58 kWh (LFP)</td>
+              <td><strong>85 kWh (NCM)</strong></td>
+            </tr>
+            <tr>
+              <td>시스템 전압</td>
+              <td>800V</td>
+              <td>공통</td>
+            </tr>
+            <tr>
+              <td>충전 성능 (DC 최대)</td>
+              <td>최대 200 kW</td>
+              <td><strong>최대 320 kW</strong></td>
+            </tr>
+            <tr>
+              <td>충전 시간 (10-80%)</td>
+              <td>약 20분</td>
+              <td><strong>약 22분</strong></td>
+            </tr>
+            <tr>
+              <td>AC 완속 충전</td>
+              <td>최대 11 kW</td>
+              <td>공통</td>
+            </tr>
+
+            <tr class="category-row">
+              <td colspan="3">[ 효율 · 주행거리 (WLTP) ]</td>
+            </tr>
+            <tr>
+              <td>WLTP 최대 주행거리</td>
+              <td>542 km</td>
+              <td><strong>792 km</strong></td>
+            </tr>
+            <tr>
+              <td>전비 환산</td>
+              <td>약 8.1 km/kWh</td>
+              <td>공통</td>
+            </tr>
+            <tr>
+              <td>공기저항계수 (Cd)</td>
+              <td>0.21</td>
+              <td>공통</td>
+            </tr>
+
+            <tr class="category-row">
+              <td colspan="3">[ 적재 · 크기 ]</td>
+            </tr>
+            <tr>
+              <td>트렁크 용량</td>
+              <td>405 L</td>
+              <td>공통</td>
+            </tr>
+            <tr>
+              <td>프렁크 (전면 트렁크)</td>
+              <td>101 L (액체 측정 기준)</td>
+              <td>공통</td>
+            </tr>
+            <tr>
+              <td>전장 / 전폭 / 전고</td>
+              <td>4,723 / 1,855 / 1,468 mm</td>
+              <td>공통</td>
+            </tr>
+            <tr>
+              <td>휠베이스</td>
+              <td>2,790 mm</td>
+              <td>공통</td>
+            </tr>
+            <tr>
+              <td>서스펜션</td>
+              <td>컴포트 서스펜션</td>
+              <td>공통</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 14. CLA 220 가솔린 하이브리드 -->
+    <section id="hybrid" class="lineup-section">
+      <div class="section-title-wrap">
+        <span class="section-tag">HYBRID LINE-UP</span>
+        <h2 class="section-title">CLA 220 가솔린 하이브리드</h2>
+      </div>
+      <p style="font-size:0.9rem; color:var(--mb-silver); margin-bottom:1.5rem; line-height:1.7;">
+        일렉트릭 CLA와 함께 <strong style="color:var(--mb-white);">가솔린 마일드 하이브리드 CLA 220</strong>도 출시됩니다. CLA 220과 CLA 220 AMG Line(런치 에디션) 2개 트림이며, 사전예약은 전기차와 함께 시작되지만 <strong style="color:var(--mb-white);">국내 도입 물량은 전기차 중심</strong>으로 운영될 예정입니다.
+      </p>
+      <div style="background:linear-gradient(90deg, rgba(0,173,239,0.1), transparent); border:1px solid var(--mb-border); border-radius:14px; padding:1rem 1.3rem; margin-bottom:1.8rem; font-size:0.88rem; color:var(--mb-silver); line-height:1.7;">
+        CLA 220은 <strong style="color:var(--accent-gold);">4기통 가솔린 + 48V 마일드 하이브리드</strong>에 <strong style="color:var(--accent-gold);">8단 DCT</strong>가 맞물립니다. 전기차와 달리 <strong style="color:var(--mb-white);">두 트림 모두 헤드업 디스플레이 · 스마트폰 연동 · MB.드라이브 어시스트 · 주차 어시스트가 기본</strong>으로 들어갑니다.
+      </div>
+
+      <div class="lineup-container" style="grid-template-columns: repeat(2, minmax(0, 320px)); justify-content: center;">
+        <div class="lineup-card">
+          <div>
+            <span class="lineup-badge">PROGRESSIVE</span>
+            <h3>CLA 220</h3>
+            <p class="lineup-price">5,990만원</p>
+          </div>
+          <ul class="lineup-specs">
+            <li>파워트레인 <span>4기통 가솔린 · 48V MHEV</span></li>
+            <li>변속기 <span>8단 DCT</span></li>
+            <li>서스펜션 <span>컴포트</span></li>
+            <li>휠 <span>18″ 5스포크 (2종 중 선택)</span></li>
+            <li>시트 <span>컴포트 시트 · ARTICO 가죽</span></li>
+            <li>트림 <span>앤트러사이트 아노다이즈드 룩</span></li>
+            <li>외장 컬러 <span>폴라화이트·아쿠아민트·제트블랙</span></li>
+          </ul>
+        </div>
+
+        <div class="lineup-card active-target">
+          <div>
+            <span class="lineup-badge target">LAUNCH EDITION</span>
+            <h3>CLA 220 AMG Line</h3>
+            <p class="lineup-price">6,290만원</p>
+          </div>
+          <ul class="lineup-specs">
+            <li>파워트레인 <span>4기통 가솔린 · 48V MHEV</span></li>
+            <li>변속기 <span>8단 DCT</span></li>
+            <li>서스펜션 <span>컴포트 · 차고 하향</span></li>
+            <li>휠 <span>18″ AMG 5스포크</span></li>
+            <li>시트 <span>스포츠 시트 · 마이크로컷 투톤</span></li>
+            <li>트림 <span>카본-그레인 알루미늄</span></li>
+            <li>외장 컬러 <span>시어블루·하이테크실버·파타고니아레드</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <p style="font-size:0.78rem; color:var(--mb-silver); margin-top:1.3rem;">* 컬러 규칙은 전기차와 동일합니다.</p>
+    </section>
+
+    <!-- 15. 카탈로그 다운로드 -->
+    <section class="catalog-download-section">
+      <div class="catalog-info">
+        <h3>📄 CLA 세부 사양 카탈로그 · 가격표</h3>
+        <p>상세 옵션표, 기술 제원, 트림별 기본 및 선택 사양 정보를 포함한 PDF 문서입니다.</p>
+      </div>
+      <div class="catalog-btn-group">
+        <a href="files/CLA_Catalog_2026.pdf" download class="c-btn c-btn-catalog">📘 공식 카탈로그 다운로드 (PDF)</a>
+        <a href="files/CLA_Pricelist_2026.pdf" download class="c-btn c-btn-outline">💰 가격표 다운로드 (PDF)</a>
+      </div>
+    </section>
+
+    <!-- 16. 하단 상담 / 사전계약 CTA 배너 -->
+    <section class="consult-card">
+      <div class="consult-header">
+        <div class="consult-title-row">
+          <h3>⚡ THE ALL-NEW ELECTRIC CLA 사전예약 &amp; 1:1 상담</h3>
+        </div>
+        <p class="consult-subtext">9월 1일 사전예약 오픈! 포항전시장 김석현 과장이 명쾌한 트림 비교와 맞춤 상담을 약속드립니다.</p>
+      </div>
+
+      <hr class="consult-divider">
+
+      <div class="consult-bottom-row">
+        <div class="advisor-details">
+          <span class="advisor-name">메르세데스-벤츠 포항전시장 <strong>김석현 과장</strong></span>
+          <a href="tel:010-9379-0999" class="advisor-phone">📞 010-9379-0999</a>
+        </div>
+        <div class="consult-btn-group">
+          <a href="https://open.kakao.com/o/sfQJqYFi" target="_blank" class="c-btn c-btn-kakao">💬 카카오톡 오픈상담</a>
+          <a href="tel:010-9379-0999" class="c-btn c-btn-call">📞 전화 바로 연결</a>
+          <a href="sms:010-9379-0999" class="c-btn c-btn-sms">✉️ 문자 메시지</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 17. 푸터 및 디스클레이머 -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-disclaimer">
+        <p>• 본 가이드북에 표기된 차량 이미지 및 사양은 국내 출시 모델의 실제 판매 사양과 일부 차이가 있을 수 있습니다.</p>
+        <p>• 표기된 주행거리(WLTP 기준)는 참고용이며, 국내 환경부 인증 결과에 따라 변경될 수 있습니다.</p>
+      </div>
+      <div class="footer-copyright">
+        Copyright ⓒ Mercedes-Benz Pohang Showroom. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <div id="imageModal" class="image-modal">
+    <span id="modalClose" class="modal-close">&times;</span>
+    <img id="modalImg" class="modal-content" src="" alt="확대 이미지">
+  </div>
+
+  <script>
+    // 외장 & 내장 컬러 클릭 시 미리보기 이미지 전환
+    let activeExtName = "149U - 폴라 화이트 (Progressive 전용)";
+    let activeIntName = "101A - ARTICO 가죽 블랙/블랙 (기본 · Essential·Advanced·250+)";
+
+    const extChips = document.querySelectorAll('#ext-palette .color-chip, #ext-palette-amg .color-chip');
+    const intChips = document.querySelectorAll('#int-palette .color-chip');
+
+    const extSelectedText = document.getElementById('ext-selected-text');
+    const intSelectedText = document.getElementById('int-selected-text');
+    const totalColorText = document.getElementById('total-color-text');
+
+    const extPreviewImg = document.getElementById('ext-preview-img');
+    const intPreviewImg = document.getElementById('int-preview-img');
+
+    function updateSummary() {
+      if (totalColorText) {
+        totalColorText.innerText = `${activeExtName} / ${activeIntName}`;
+      }
+    }
+
+    extChips.forEach(chip => {
+      chip.addEventListener('click', function() {
+        extChips.forEach(c => c.classList.remove('active'));
+        this.classList.add('active');
+
+        activeExtName = this.getAttribute('data-color-name');
+        const imgSrc = this.getAttribute('data-img-src');
+
+        if (extSelectedText) extSelectedText.innerText = `외장: ${activeExtName}`;
+        if (imgSrc && extPreviewImg) {
+          extPreviewImg.src = imgSrc;
+          extPreviewImg.style.display = 'block';
+        }
+
+        updateSummary();
+      });
+    });
+
+    intChips.forEach(chip => {
+      chip.addEventListener('click', function() {
+        intChips.forEach(c => c.classList.remove('active'));
+        this.classList.add('active');
+
+        activeIntName = this.getAttribute('data-color-name');
+        const imgSrc = this.getAttribute('data-img-src');
+
+        if (intSelectedText) intSelectedText.innerText = `내장: ${activeIntName}`;
+        if (imgSrc && intPreviewImg) {
+          intPreviewImg.src = imgSrc;
+          intPreviewImg.style.display = 'block';
+        }
+
+        updateSummary();
+      });
+    });
+
+    // 이미지 클릭 시 확대 모달
+    const imgModal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImg');
+    const modalClose = document.getElementById('modalClose');
+
+    document.querySelectorAll('.clickable-img').forEach(img => {
+      img.addEventListener('click', function() {
+        if (this.src && this.style.display !== 'none') {
+          imgModal.classList.add('active');
+          modalImg.src = this.src;
+        }
+      });
+    });
+
+    modalClose.addEventListener('click', () => imgModal.classList.remove('active'));
+    imgModal.addEventListener('click', (e) => {
+      if (e.target === imgModal) imgModal.classList.remove('active');
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') imgModal.classList.remove('active');
+    });
+  </script>
+</body>
+</html>
